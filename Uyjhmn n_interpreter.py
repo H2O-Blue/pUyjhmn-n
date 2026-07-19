@@ -109,16 +109,16 @@ def pUyjhmn_n(code: str):
             opened_var = var
         elif sw('ASSIGN ') and ew(ttov):
             isopen()
-            vars[opened_var] = int(line.lstrip('ASSIGN ').rstrip(ttov))
+            vars[opened_var] = int(line[7:-21])
         elif sw('ADD ') and ew(ttov):
-            var = line.lstrip('ADD ').rstrip(ttov)
+            var = line[4:-21]
             isopen()
-            isinvars()
+            isinvars(var)
             vars[opened_var] += vars[var]
         elif sw(f'MULTIPLY{tov} BY'):
             var = line.lstrip(f'MULTIPLY{tov} BY')
             isopen()
-            isinvars()
+            isinvars(var)
             vars[opened_var] *= vars[var]
         elif line == f'{ptov}CHARACTER':
             isopen()
