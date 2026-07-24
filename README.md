@@ -146,7 +146,7 @@ It is 9223372036854775807!
 ```
 ###### (not to be confused with 9223372036854775807 factorial)
 
-There's also 99 bottles of beer on the wall but it's in like the contents of this repo, the .txt with the name "Uyjhmn n_99_bottles_of_beer"
+There's also 99 bottles of beer on the wall but it's in like the contents of this repo, the .txt with the name "Uyjhmn n_99_bottles_of_beer", definitely could be optimized though...
 
 ---
 
