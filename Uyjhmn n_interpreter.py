@@ -115,8 +115,8 @@ def pUyjhmn_n(code: str):
             isopen()
             isinvars(var)
             vars[opened_var] += vars[var]
-        elif sw(f'MULTIPLY{tov} BY'):
-            var = line.lstrip(f'MULTIPLY{tov} BY')
+        elif sw(f'MULTIPLY{tov} BY '):
+            var = line[30:]
             isopen()
             isinvars(var)
             vars[opened_var] *= vars[var]
