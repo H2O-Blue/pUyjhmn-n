@@ -90,7 +90,7 @@ def pUyjhmn_n(code: str):
     for line, idx in enumerate(code):
         if idx.startswith('DEFINE THE NEW LABEL '):
             if line == lcode:
-                raise SyntaxError(f'Nothing is after the label {idx.lstrip('DEFINE THE NEW LABEL ')}. Did you forget to add something after the label?')
+                raise SyntaxError(f'Nothing is after the label {idx[21:]}. Did you forget to add something after the label?')
             labels[idx[21:]] = line + 1
     while True:
         if curr_line > lcode:
@@ -100,7 +100,7 @@ def pUyjhmn_n(code: str):
         ew = line.endswith
         jump = False
         if sw('PRINT THE CHARACTER WITH THE ASCII VALUE '):
-            print_alt(chr(int(line.lstrip('PRINT THE CHARACTER WITH THE ASCII VALUE '))))
+            print_alt(chr(int(line[41:])))
         elif sw('DECLARE THE NEW VARIABLE '):
             vars[line[25:]] = 0
         elif sw('OPEN THE VARIABLE '):
